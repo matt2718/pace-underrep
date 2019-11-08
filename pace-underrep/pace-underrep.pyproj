@@ -57,7 +57,6 @@
     <Folder Include="pace_underrep\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="azure-pipelines.yml" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />
