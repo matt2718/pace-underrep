@@ -82,9 +82,14 @@ stages:
           - task: AzureWebApp@1
             displayName: 'Deploy Azure Web App : underrep'
             inputs:
-              azureSubscription: '$(azureServiceConnectionId)'
+              azureSubscription: 'Azure-Ramapriya'
               appType: 'webAppLinux'
-              appName: '$(webAppName)'
+              appName: 'underrep'
               deployToSlotOrASE: true
+              resourceGroupName: 'pace-underrep'
               slotName: 'production'
               package: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
+              runtimeStack: 'PYTHON|3.7'
+              startUpCommand: 'python manage.py migrate'
+
+          
