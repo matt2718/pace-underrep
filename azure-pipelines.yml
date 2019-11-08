@@ -90,6 +90,5 @@ stages:
               slotName: 'production'
               package: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
               runtimeStack: 'PYTHON|3.7'
-              startUpCommand: 'python manage.py migrate'
 
           
