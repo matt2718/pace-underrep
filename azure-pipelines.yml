@@ -11,13 +11,13 @@ variables:
   azureServiceConnectionId: 'bd3e18df-d007-4c6f-8fbb-0cb6177feeaa'
   
   # Web app name
-  webAppName: 'underrep'
+  webAppName: 'pace-underrep'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
   # Environment name
-  environmentName: 'underrep'
+  environmentName: 'pace-underrep'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
@@ -80,11 +80,11 @@ stages:
             displayName: 'Use Python version'
 
           - task: AzureWebApp@1
-            displayName: 'Deploy Azure Web App : underrep'
+            displayName: 'Deploy Azure Web App : pace-underrep'
             inputs:
               azureSubscription: 'Azure-Ramapriya'
               appType: 'webAppLinux'
-              appName: 'underrep'
+              appName: 'pace-underrep'
               deployToSlotOrASE: true
               resourceGroupName: 'pace-underrep'
               slotName: 'production'
