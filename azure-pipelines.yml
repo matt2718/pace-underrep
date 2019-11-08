@@ -82,6 +82,9 @@ stages:
           - task: AzureWebApp@1
             displayName: 'Deploy Azure Web App : underrep'
             inputs:
-              azureSubscription: $(azureServiceConnectionId)
-              appName: $(webAppName)
-              package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
+              azureSubscription: '$(azureServiceConnectionId)'
+              appType: 'webAppLinux'
+              appName: '$(webAppName)'
+              deployToSlotOrASE: true
+              slotName: 'production'
+              package: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
