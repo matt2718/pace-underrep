@@ -94,6 +94,6 @@ stages:
           - task: PythonScript@0
             inputs:
               scriptSource: 'inline'
-              script: 'python manage.py migrate'
+              script: 'manage.py migrate'
 
           
