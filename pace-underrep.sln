@@ -7,8 +7,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "pace-underrep", "pace-under
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{10D8BAC1-A22A-439B-AB6A-EE3AB8B52160}"
 	ProjectSection(SolutionItems) = preProject
-		azure-pipelines.yml = azure-pipelines.yml
 		requirements.txt = requirements.txt
+		underrep - Web Deploy.pubxml = underrep - Web Deploy.pubxml
 	EndProjectSection
 EndProject
 Global
