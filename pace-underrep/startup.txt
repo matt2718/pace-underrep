@@ -1,1 +1,1 @@
-/bin/bash -c "source antenv/bin/activate && python -m pip install --upgrade pip && python -m pip install -r requirements.txt && && python manage.py collectstatic --clear --noinput python manage.py collectstatic --noinput && gunicorn --bind=0.0.0.0 --timeout 600 pace_underrep.wsgi"
+/bin/bash -c "source antenv/bin/activate && python -m pip install --upgrade pip && python -m pip install -r requirements.txt && python manage.py collectstatic --clear --noinput && python manage.py collectstatic --noinput && gunicorn --bind=0.0.0.0 --timeout 600 pace_underrep.wsgi"
