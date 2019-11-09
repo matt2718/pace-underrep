@@ -4,7 +4,7 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <Name>pace-underrep</Name>
     <RootNamespace>pace-underrep</RootNamespace>
-    <InterpreterId>MSBuild|paceenv|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|antenv|$(MSBuildProjectFullPath)</InterpreterId>
     <TestFramework>Pytest</TestFramework>
   </PropertyGroup>
   <PropertyGroup>
@@ -87,7 +87,10 @@
     <Content Include="app\templates\app\layout.html" />
     <Content Include="app\templates\app\login.html" />
     <Content Include="app\templates\app\loginpartial.html" />
+    <Content Include="startup.txt" />
     <None Include="underrep - Web Deploy.pubxml" />
+    <None Include="underrep - ReadOnly - FTP.pubxml" />
+    <None Include="underrep - FTP.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="readme.html">
@@ -95,10 +98,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Interpreter Include="paceenv\">
-      <Id>paceenv</Id>
+    <Interpreter Include="antenv\">
+      <Id>antenv</Id>
       <Version>3.7</Version>
-      <Description>paceenv (Python 3.7 (64-bit))</Description>
+      <Description>antenv (Python 3.7 (64-bit))</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
