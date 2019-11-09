@@ -82,6 +82,6 @@ stages:
           - task: AzureRmWebAppDeployment@4
             inputs:
               ConnectionType: 'PublishProfile'
-              PublishProfilePath: '$(System.DefaultWorkingDirectory)/**/underrep - Web Deploy.pubxml'
+              PublishProfilePath: 'underrep - Web Deploy.pubxml'
               PublishProfilePassword: 'lEz4ciEwEhqsxDbXr4lNao9AvtphTHf2rcjlujyPe7oQHl6BjplrjDDbx9aZ'
               packageForLinux: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
