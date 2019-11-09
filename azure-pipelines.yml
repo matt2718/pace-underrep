@@ -14,7 +14,7 @@ variables:
   webAppName: 'underrep'
 
   # Agent VM image name
-  vmImageName: 'ubuntu-latest'
+  vmImageName: 'windows-latest'
 
   # Environment name
   environmentName: 'underrep'
