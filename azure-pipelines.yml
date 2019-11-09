@@ -91,4 +91,9 @@ stages:
               package: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
               runtimeStack: 'PYTHON|3.7'
 
+          - task: PythonScript@0
+            inputs:
+              scriptSource: 'inline'
+              script: 'python manage.py migrate'
+
           
