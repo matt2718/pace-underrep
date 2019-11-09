@@ -11,7 +11,7 @@ variables:
   azureServiceConnectionId: 'bd3e18df-d007-4c6f-8fbb-0cb6177feeaa'
   
   # Web app name
-  webAppName: 'pace-underrep'
+  webAppName: 'underrep'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -80,11 +80,11 @@ stages:
             displayName: 'Use Python version'
 
           - task: AzureWebApp@1
-            displayName: 'Deploy Azure Web App : pace-underrep'
+            displayName: 'Deploy Azure Web App : underrep'
             inputs:
               azureSubscription: 'Azure-Ramapriya'
               appType: 'webAppLinux'
-              appName: 'pace-underrep'
+              appName: 'underrep'
               deployToSlotOrASE: true
               resourceGroupName: 'pace-underrep'
               slotName: 'production'
