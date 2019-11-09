@@ -84,6 +84,6 @@ stages:
               ConnectionType: 'PublishProfile'
               PublishProfilePath: '$(System.DefaultWorkingDirectory)/**/underrep - Web Deploy.pubxml'
               PublishProfilePassword: 'lEz4ciEwEhqsxDbXr4lNao9AvtphTHf2rcjlujyPe7oQHl6BjplrjDDbx9aZ'
-              packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+              packageForLinux: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
 
           
