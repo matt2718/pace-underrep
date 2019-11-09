@@ -26,7 +26,7 @@ def contact(request):
         'app/contact.html',
         {
             'title':'Contact',
-            'message':'Your contact page.',
+            'message':'Ramapriya\'s contact page.',
             'year':datetime.now().year,
         }
     )
