@@ -47,6 +47,7 @@
   <ItemGroup>
     <Folder Include="app\" />
     <Folder Include="app\migrations\" />
+    <Folder Include="app\choices\" />
     <Folder Include="app\static\" />
     <Folder Include="app\static\app\" />
     <Folder Include="app\static\app\content\" />
@@ -57,6 +58,7 @@
     <Folder Include="pace_underrep\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\choices\gender.txt" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />
