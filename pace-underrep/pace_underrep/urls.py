@@ -15,7 +15,7 @@ from django.views.static import serve
 urlpatterns = [
     path('', views.home, name='home'),
     path('contact/', views.contact, name='contact'),
-    path('about/', views.about, name='about'),
+    path('directory/', views.directory, name='directory'),
     path('login/',
          LoginView.as_view
          (

@@ -32,6 +32,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="app\people.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="app\forms.py" />
     <Compile Include="app\models.py" />
     <Compile Include="app\tests.py" />
@@ -83,7 +86,7 @@
     <Content Include="app\static\app\scripts\respond.js" />
     <Content Include="app\static\app\scripts\respond.min.js" />
     <Content Include="app\static\app\scripts\_references.js" />
-    <Content Include="app\templates\app\about.html" />
+    <Content Include="app\templates\app\directory.html" />
     <Content Include="app\templates\app\contact.html" />
     <Content Include="app\templates\app\index.html" />
     <Content Include="app\templates\app\layout.html" />
