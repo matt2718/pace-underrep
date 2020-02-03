@@ -6,29 +6,55 @@ from datetime import datetime
 from django.shortcuts import render
 from django.http import HttpRequest
 from .models import Person
+from .models import PersonTable
+from .models import PersonForm
 import app.people as people
+from django.http import HttpResponseRedirect
 
 def home(request):
     """Renders the home page."""
     assert isinstance(request, HttpRequest)
+    user = request.user
     return render(
         request,
         'app/index.html',
         {
+            'records':people.filter(request, user),
+            'table':PersonTable(people.filter(request, user)),
             'title':'Home Page',
             'year':datetime.now().year,
         }
     )
 
-def directory(request):
+#def directory(request):
+#    assert isinstance(request, HttpRequest)
+#    user = request.user
+#    return render(
+#        request,
+#        'app/directory.html',
+#        {
+#            'records':people.filter(request, user),
+#            'message' : 'Test message please ignore',
+#            'title':'Directory',
+#            'year':datetime.now().year,
+#        }
+#    )
+
+def add(request):
     assert isinstance(request, HttpRequest)
-    user = request.user
+    if request.method == 'POST':
+        form = PersonForm(request.POST)
+        if form.is_valid():
+            newPerson = form.save()
+            return HttpResponseRedirect('/')
+    else:
+        form = PersonForm()
     return render(
         request,
-        'app/directory.html',
+        'app/add.html',
         {
-            'records':people.filter(request, user),
-            'title':'Directory',
+            'title':'Add Record',
+            'form':form,
             'year':datetime.now().year,
         }
     )
