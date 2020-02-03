@@ -10,6 +10,7 @@ from .models import PersonTable
 from .models import PersonForm
 import app.people as people
 from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
 
 def home(request):
     """Renders the home page."""
@@ -40,6 +41,7 @@ def home(request):
 #        }
 #    )
 
+@login_required
 def add(request):
     assert isinstance(request, HttpRequest)
     if request.method == 'POST':

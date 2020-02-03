@@ -58,11 +58,13 @@
     <Folder Include="app\static\app\scripts\" />
     <Folder Include="app\templates\" />
     <Folder Include="app\templates\app\" />
+    <Folder Include="app\templates\django_registration\" />
     <Folder Include="pace_underrep\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\choices\gender.txt" />
     <Content Include="app\templates\app\add.html" />
+    <Content Include="app\templates\django_registration\registration_form.html" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />

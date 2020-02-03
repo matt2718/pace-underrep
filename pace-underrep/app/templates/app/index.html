@@ -11,9 +11,9 @@
 </div>
 
 <h1>Directory
-    {#% if request.user.is_authenticated %#}
+    {% if request.user.is_authenticated %}
     (<a href="/add">+</a>)
-    {#}% endif %#}
+    {% endif %}
     </h1>
 <div class="col-md-12">
     {%render_table table %}
