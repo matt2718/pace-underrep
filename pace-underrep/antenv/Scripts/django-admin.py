@@ -1,4 +1,4 @@
-#!D:\Projects\pace-underrep\pace-underrep\antenv\Scripts\python.exe
+#!d:\projects\pace-underrep\pace-underrep\antenv\scripts\python.exe
 from django.core import management
 
 if __name__ == "__main__":

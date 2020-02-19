@@ -11,6 +11,7 @@ from .models import PersonForm
 import app.people as people
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
+from django.shortcuts import get_object_or_404
 
 def home(request):
     """Renders the home page."""
@@ -24,6 +25,20 @@ def home(request):
             'table':PersonTable(people.filter(request, user)),
             'title':'Home Page',
             'year':datetime.now().year,
+        }
+    )
+
+def profile(request):
+    """Gets the user's profile."""
+    assert isinstance(request, HttpRequest)
+    user = request.user
+    record = get_object_or_404()
+    return render(
+        request,
+        'app/profile.html',
+        {
+            'record':Person.people.filter(request)
+            
         }
     )
 

@@ -8,11 +8,12 @@ def filter(request, person):
         #persons = Person.people.all()
         #persons = Person.people.filter(visibility = Visibility.PUBLIC);
         return records;
-    else:        
-        records.union(Person.people.filter(visibility = Visibility.index("AUTHED")))        
+    else:
+        authed = Person.people.filter(visibility = Visibility.index("AUTHED"))
+        records = (records | authed)        
         try:
             user = Person.people.get(account = request.user)
-            records.union(Person.people.filter(identities__in=user.identities.all()).exclude(id=user.pk).distinct())
+            records = (records | Person.people.filter(identities__in=user.identities.all()).exclude(id=user.pk)).distinct()
         except Person.DoesNotExist:
             persons = None        
     return records

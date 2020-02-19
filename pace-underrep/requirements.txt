@@ -1,6 +1,7 @@
 --find-links wheelhouse
-django >= 2.1.6, < 3.0 
+django >= 3.0.3
 whitenoise
 pillow
 django-registration
+django-datatables-view
 django-tables2
